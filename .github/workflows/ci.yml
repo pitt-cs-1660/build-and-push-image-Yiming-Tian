@@ -34,4 +34,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: us-central1-docker.pkg.dev/homework3-440622/docker-repo/my-image:latest
+          tags: us-east1-docker.pkg.dev/homework3-440622/docker-repo/my-image:latest

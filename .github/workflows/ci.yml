@@ -16,8 +16,6 @@ jobs:
 
       # Authenticate with GCP with workload identity provider
       - uses: 'google-github-actions/auth@v2'
-        id: auth
-        name: Authenticate to GCP
         with:
           project_id: 'homework3-440622' 
           workload_identity_provider: 'projects/1086037284239/locations/global/workloadIdentityPools/github/providers/my-repo'
@@ -26,13 +24,7 @@ jobs:
       - name: gcloud Configure Docker
         run: gcloud auth configure-docker us-east1-docker.pkg.dev
 
-      # Setup Docker Buildx
-      - name: Setup docker buildx
-        uses: docker/setup-buildx-action@v3
-        with:
-          platforms: linux/amd64,linux/arm64
-
-      # Build and Push using Buildx
+      # Build and Push Docker Image
       - name: Build and Push
         uses: docker/build-push-action@v6
         with:
@@ -40,9 +32,3 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: us-east1-docker.pkg.dev/homework3-440622/docker-repo/my-image:latest
-
-      # Option to build and push without Buildx
-      - name: Build and Push Without Buildx
-        run: |
-          docker build -t us-east1-docker.pkg.dev/homework3-440622/docker-repo/my-image:latest .
-          docker push us-east1-docker.pkg.dev/homework3-440622/docker-repo/my-image:latest

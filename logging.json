@@ -1,0 +1,234 @@
+[
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "CandyTian0526@gmail.com",
+        "principalSubject": "user:CandyTian0526@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.139.64.28",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.create invocation-id/414bcf5321844009b135caad6fc0ece0 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-05T00:16:25.771777379Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+      "authorizationInfo": [
+        {
+          "resource": "projects/homework3-440622/locations/global",
+          "permission": "iam.workloadIdentityPools.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/homework3-440622/locations/global",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolRequest",
+        "workloadIdentityPool": {
+          "displayName": "GitHub Actions Pool",
+          "disabled": false
+        },
+        "workloadIdentityPoolId": "github",
+        "parent": "projects/homework3-440622/locations/global"
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "1jt1t61dqpgb",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPool",
+        "project_id": "homework3-440622",
+        "service": "iam.googleapis.com"
+      }
+    },
+    "timestamp": "2024-11-05T00:16:25.763367420Z",
+    "severity": "ERROR",
+    "logName": "projects/homework3-440622/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-05T00:16:26.664164686Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "status": {
+        "code": 6,
+        "message": "Requested entity already exists"
+      },
+      "authenticationInfo": {
+        "principalEmail": "CandyTian0526@gmail.com",
+        "principalSubject": "user:CandyTian0526@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.139.64.28",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.iam.workload-identity-pools.providers.create-oidc invocation-id/5595aefeaac84005a58c32633b4f2209 environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-05T00:17:51.298409099Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "iam.googleapis.com",
+      "methodName": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+      "authorizationInfo": [
+        {
+          "resource": "projects/homework3-440622/locations/global/workloadIdentityPools/github",
+          "permission": "iam.workloadIdentityPoolProviders.create",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/homework3-440622/locations/global/workloadIdentityPools/github",
+      "request": {
+        "@type": "type.googleapis.com/google.iam.v1.CreateWorkloadIdentityPoolProviderRequest",
+        "workloadIdentityPoolProviderId": "my-repo",
+        "parent": "projects/homework3-440622/locations/global/workloadIdentityPools/github",
+        "workloadIdentityPoolProvider": {
+          "displayName": "My GitHub repo Provider",
+          "disabled": false,
+          "attributeMapping": {
+            "google.subject": "assertion.sub",
+            "attribute.actor": "assertion.actor",
+            "attribute.repository_owner": "assertion.repository_owner",
+            "attribute.repository": "assertion.repository"
+          },
+          "oidc": {
+            "issuerUri": "https://token.actions.githubusercontent.com"
+          },
+          "attributeCondition": "assertion.repository_owner == 'pitt-cs-1660'"
+        }
+      },
+      "resourceLocation": {
+        "currentLocations": [
+          "global"
+        ]
+      }
+    },
+    "insertId": "w8xhawdolml",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.iam.v1.WorkloadIdentityPools.CreateWorkloadIdentityPoolProvider",
+        "service": "iam.googleapis.com",
+        "project_id": "homework3-440622"
+      }
+    },
+    "timestamp": "2024-11-05T00:17:51.276811642Z",
+    "severity": "ERROR",
+    "logName": "projects/homework3-440622/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-05T00:17:51.829762912Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "CandyTian0526@gmail.com",
+        "principalSubject": "user:CandyTian0526@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.139.64.28",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/900c4400076944be9e0d5f8163479c8e environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-05T00:18:27.860292683Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/homework3-440622/locations/us-east1/repositories/docker-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/homework3-440622/locations/us-east1/repositories/docker-repo",
+      "request": {
+        "resource": "projects/homework3-440622/locations/us-east1/repositories/docker-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "r72kqfd260l",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "service": "artifactregistry.googleapis.com",
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "project_id": "homework3-440622"
+      }
+    },
+    "timestamp": "2024-11-05T00:18:27.853241384Z",
+    "severity": "NOTICE",
+    "logName": "projects/homework3-440622/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-05T00:18:28.780442775Z"
+  },
+  {
+    "protoPayload": {
+      "@type": "type.googleapis.com/google.cloud.audit.AuditLog",
+      "authenticationInfo": {
+        "principalEmail": "CandyTian0526@gmail.com",
+        "principalSubject": "user:CandyTian0526@gmail.com"
+      },
+      "requestMetadata": {
+        "callerIp": "34.139.64.28",
+        "callerSuppliedUserAgent": "google-cloud-sdk gcloud/499.0.0 command/gcloud.artifacts.repositories.add-iam-policy-binding invocation-id/a338d83f007f44c2a92e37d58824d4ca environment/devshell environment-version/None client-os/LINUX client-os-ver/6.1.112 client-pltf-arch/x86_64 interactive/True from-script/False python/3.11.9 term/screen (Linux 6.1.112+),gzip(gfe),gzip(gfe)",
+        "requestAttributes": {
+          "time": "2024-11-05T00:18:38.564326181Z",
+          "auth": {}
+        },
+        "destinationAttributes": {}
+      },
+      "serviceName": "artifactregistry.googleapis.com",
+      "methodName": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+      "authorizationInfo": [
+        {
+          "resource": "projects/homework3-440622/locations/us-east1/repositories/docker-repo",
+          "permission": "artifactregistry.repositories.setIamPolicy",
+          "granted": true,
+          "resourceAttributes": {},
+          "permissionType": "ADMIN_WRITE"
+        }
+      ],
+      "resourceName": "projects/homework3-440622/locations/us-east1/repositories/docker-repo",
+      "request": {
+        "resource": "projects/homework3-440622/locations/us-east1/repositories/docker-repo",
+        "@type": "type.googleapis.com/google.iam.v1.SetIamPolicyRequest"
+      },
+      "response": {
+        "@type": "type.googleapis.com/google.iam.v1.Policy"
+      }
+    },
+    "insertId": "s2m2ugd26sp",
+    "resource": {
+      "type": "audited_resource",
+      "labels": {
+        "method": "google.devtools.artifactregistry.v1.ArtifactRegistry.SetIamPolicy",
+        "service": "artifactregistry.googleapis.com",
+        "project_id": "homework3-440622"
+      }
+    },
+    "timestamp": "2024-11-05T00:18:38.556058192Z",
+    "severity": "NOTICE",
+    "logName": "projects/homework3-440622/logs/cloudaudit.googleapis.com%2Factivity",
+    "receiveTimestamp": "2024-11-05T00:18:39.130201909Z"
+  }
+]
